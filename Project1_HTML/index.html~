@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "utf8">
+	<title> New stuff I learn </title>
+<style>
+	h1 {
+		color: red;
+		font-size: 75px;
+	}
+	p {
+		color: white;
+		font-size: 2em;
+	}
+	body {
+		background-color:teal;
+	}
+
+</style>
+</head>
+<body>
+	<h1> RAWR xD </h1>
+	<p> I cant do php which makes me very sad because I really want to code stuff in here, and I think i just have to download appache, but I don't trust myself </p>
+	<h2> I wish I could log in to the server at school from here womp womp </h2>
+</body>
+</html>
