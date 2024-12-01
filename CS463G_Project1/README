@@ -1,0 +1,2 @@
+This project modeled a fully functional 4x4x4 Pyraminx, and could be randomized to any instance. In addition, the A* algorithm was implemented as a way of solving the puzzle when randomized
+to a state reachable in 3 - 15 steps.
