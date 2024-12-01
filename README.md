@@ -3,10 +3,17 @@ Within each project folder, you will find a brief description of the purpose of 
 Ordered by: (Project Number)_(The Class the Project was Completed for)
 
 Key of Classes:
+
 Java - High School, Project-Based Programming Course
+
 EGR 102 - Fundamentals of Engineering Computing
+
 CS 215 - Intro to Program Design Abstraction/Problem Solving
+
 CS 216 - Intro to Software Engineering Techniques
+
 CS 270 - Systems Programming
+
 CS 315 - Algorithm Design/Analysis
+
 CS 463G - Intro to Artificial Intelligence
