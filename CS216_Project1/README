@@ -1,0 +1,3 @@
+This projcect implemented an IMDB like website, where users could input two movies and get back a list of actors in both movies, common actors in both movies, or actors in one movie
+but not the other. In addition, users could also input an actors name and display all the movies they worked in with their co-actors. As a result, it functioned as a database with various
+different search functions.
