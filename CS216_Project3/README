@@ -1,3 +1,0 @@
-This project focused on the Breadth First Search Algorithm to explore a dictionary comprised of four-letter words. It would take in 2 user input strings, word1, and word2, 
-and search the dictionary to see if there was a path connecting them by changing one letter of word1 at a time until word2 was found. If there existed a path, it would look for the 
-shortest one and print it out.
