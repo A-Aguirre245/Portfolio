@@ -1,0 +1,2 @@
+This project focused on the Longest Common Subsequence Algorithm, specifically implemented with a dynamic programming approach. By breaking the problem into smaller subunits, the 
+efficiency of the program changes drasticaly by reducing redundant calculations.
