@@ -1,0 +1,2 @@
+This project aimed to simulate hardware caches, that take advantage of locality and various storage sizes to speed up access
+of data. By placing frequently used caches in the smaller caches, read and writes become faster and more optimized.
