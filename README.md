@@ -1,4 +1,4 @@
-This repository accumulates distinct projects and previous coding assignments.
+This repository accumulates distinct projects/coding assignments from previous classes.
 Within each folder, you will find a brief description of the purpose of each assignment.
 
 Key of Classes:
