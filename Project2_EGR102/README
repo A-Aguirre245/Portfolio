@@ -1,2 +1,3 @@
-This project used a photoresistor and a LED circuit to measure the amount of reflected light of 3 specific materials (wood.
-It would then use that to move a servo motor that would physically indicate what material was being sensed from three previously selected materials
+This project used a photoresistor and an LED circuit with the code to measure the amount of reflected light from 3 specific materials (wood, plastic, and paper).
+Once those measurements were taken, a detector would be placed over one of the three materials and cause a servo motor to move and indicate to the user
+what material of the three was being sensed.
