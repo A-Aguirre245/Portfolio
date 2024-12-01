@@ -1,0 +1,2 @@
+This project used prolog to focus on logic-based relations in my family. A four generational family tree knowledge base was created with children realations and age as the only facts. 
+All other relations such as grandparents, siblings, and nth cousins-k times removed were all derived from rules. 
