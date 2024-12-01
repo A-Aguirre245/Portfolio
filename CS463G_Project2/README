@@ -1,2 +1,2 @@
 This project implemented three different SAT Solving techniques: DPLL, a Genetic Algorithm, and WalkSAT. Formulas were given in conjunctive normal form and the three separate algorithms
-were tested on those formulas to find possible truth assignments that lead to satisfiability. 
+were tested on those formulas to find possible truth assignments that could lead to satisfiability. 
