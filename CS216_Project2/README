@@ -1,0 +1,2 @@
+This project implemented an autosearch feature. Thus, given an input string from a user, the code would find "search results" that matched the initial string prefix and order them
+in a descdenig list according to their assigned weights. 
