@@ -1,7 +1,6 @@
 This repository accumulates various projects, labs, and previous coding assignments.
 Within each folder, you will find a brief description of the purpose of each assignment.
 
-Ordered by: (The Class the Project was Completed for)_(Project Number) ---
 Key of Classes:
 
 Java - High School, Project-Based Programming Course
