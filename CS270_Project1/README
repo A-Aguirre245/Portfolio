@@ -1,0 +1,2 @@
+This project implemented a Hash Map data structure that can map strings to arbitrary values. This project also adjusts the map 
+when the number of elements becomes larger and the hash map starts becoming full, as to keep performance optimal.
