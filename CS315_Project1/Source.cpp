@@ -1,119 +1,55 @@
-#include "trees.h"
+#include "Sort.h"
 #include <iostream>
 
 using namespace std;
 
 int main() {
 
-    int* testRandom = new int[129];
-    int* testBad = new int[129];
-    int* deleteNodes = new int[15];
-    string names[3] = { "testRandom.csv", "deleteNodes.csv", "testBad.csv"};
+    int* sortSmall = new int[maxSmall];
+    int* sortMedium = new int [maxMed];
+    int* sortLarge = new int[maxLarge];
+    int* invSmall = new int[maxSmall];
+    int* invMedium = new int[maxMed];
+    int* invLarge = new int[maxLarge];
+    int* ranSmall = new int[maxSmall];
+    int* ranMedium = new int[maxMed];
+    int* ranLarge = new int[maxLarge];
 
-    convertIn(names[0], testRandom);
-    trees tree1;
-    
-    for (int i = 0; i < 129; i++) {
-        nodes* temp = new nodes(testRandom[i]);
-        tree1.treeInsert(temp);
+    string names[9] = { "pokemonSortedSmall.csv","pokemonSortedMedium.csv", "pokemonSortedLarge.csv", "pokemonReverseSortedSmall.csv",
+        "pokemonReverseSortedMedium.csv","pokemonReverseSortedLarge.csv", "pokemonRandomSmall.csv",
+        "pokemonRandomMedium.csv","pokemonRandomLarge.csv" };
+
+    int* sorts[9] = { sortSmall, sortMedium, sortLarge, invSmall, invMedium, invLarge, ranSmall, ranMedium, ranLarge };
+
+    int sizes[3] = { maxSmall, maxMed, maxLarge };
+
+    //sortPrint(names, sorts, sizes, 9);
+
+    int counter;
+    for (int i = 0; i < 9; i++) {
+        counter = 0;
+
+        cout << "File Name : " << names[i] << endl;
+        cout << "Initial Order : ";
+        convertIn(names[i], sorts[i]);
+        printSort(sorts[i], sizes[i % 3]);
+        cout << "Order after Insertion Sort : ";
+        counter = insertionSort(sorts[i], sizes[i % 3]);
+        printSort(sorts[i], sizes[i % 3]);
+        cout << "Number of Comparisons Insertion Sort : " << counter << endl << endl;
+        cout << "Order after Merge Sort : ";
+        convertIn(names[i], sorts[i]);
+        counter = 0;
+        mergeSort(sorts[i], 0, sizes[i % 3] - 1, counter);
+        printSort(sorts[i], sizes[i % 3]);
+        cout << "Number of Comparisons Merge Sort : " << counter << endl << endl;
+        cout << "Order after QuickSort : ";
+        counter = 0;
+        convertIn(names[i], sorts[i]);
+        quickSort(sorts[i], 0, sizes[i % 3] - 1, counter);
+        printSort(sorts[i], sizes[i % 3]);
+        cout << "Number of Comparisons QuickSort : " << counter << endl << endl;
+
+        delete[] sorts[i];
     }
-
-    cout << "Inorder traversal after inserting testRandom.csv into BST : " << endl;
-
-    treeWalk(tree1.getRoot());
-    cout << endl << endl;
-  
-    cout << "Max depth of BST after inserting testRandom.csv:" << findDepth(tree1.getRoot()) << endl << endl;
-
-    convertIn(names[1], deleteNodes);
-    for (int i = 0; i < 15; i++) {
-        nodes* temp = treeSearch(tree1.getRoot(), deleteNodes[i]);
-        tree1.treeDelete(temp);
-    }
-    
-    cout << "Inorder traversal after deleting deleteNodes.csv:" << endl;
-    treeWalk(tree1.getRoot());
-    cout << endl << endl;
-
-    cout << "Max depth of BST after deleting deleteNodes.csv:" << findDepth(tree1.getRoot()) << endl << endl;
-
-    convertIn(names[2], testBad);
-    trees tree2;
-
-    for (int i = 0; i < 129; i++) {
-        nodes* temp = new nodes(testBad[i]);
-        tree2.treeInsert(temp);
-    }
-
-    cout << "Inorder traversal after inserting testRandom.csv into BST : " << endl;
-
-    treeWalk(tree2.getRoot());
-    cout << endl << endl;
-
-    cout << "Max depth of BST after inserting testRandom.csv:" << findDepth(tree2.getRoot()) << endl << endl;
-
-    convertIn(names[1], deleteNodes);
-    for (int i = 0; i < 15; i++) {
-        nodes* temp = treeSearch(tree2.getRoot(), deleteNodes[i]);
-        tree2.treeDelete(temp);
-    }
-
-    cout << "Inorder traversal after deleting deleteNodes.csv:" << endl;
-    treeWalk(tree2.getRoot());
-    cout << endl << endl;
-
-    cout << "Max depth of BST after deleting deleteNodes.csv:" << findDepth(tree2.getRoot()) << endl << endl;
- 
-    redBlack tree3;
-
-    for (int i = 0; i < 129; i++) {
-        nodes* temp = new nodes(testRandom[i]);
-        tree3.rbInsert(temp);
-    }
-
-    cout << "Inorder traversal after inserting testRandom.csv into RB Tree:" << endl;
-    treeWalk(tree3.getRoot());
-    cout << endl << endl;
-
-    cout << "Max depth of BST after inserting testRandom.csv:" << findDepth(tree3.getRoot()) << endl << endl;
-  
-    for (int i = 0; i < 15; i++) {
-        nodes* temp = treeSearch(tree3.getRoot(), deleteNodes[i]);
-        tree3.rbDelete(temp);
-    }
-
-    cout << "Inorder traversal after deleting deleteNodes.csv:" << endl;
-    treeWalk(tree3.getRoot());
-    cout << endl << endl;
-
-    cout << "Max depth of BST after deleting deleteNodes.csv:" << findDepth(tree3.getRoot()) << endl << endl;
-
-    redBlack tree4;
-
-    for (int i = 0; i < 129; i++) {
-        nodes* temp = new nodes(testBad[i]);
-        tree4.rbInsert(temp);
-    }
-
-    cout << "Inorder traversal after inserting testRandom.csv into RB Tree:" << endl;
-    treeWalk(tree4.getRoot());
-    cout << endl << endl;
-
-    cout << "Max depth of BST after inserting testRandom.csv:" << findDepth(tree4.getRoot()) << endl << endl;
-
-    for (int i = 0; i < 15; i++) {
-        nodes* temp = treeSearch(tree4.getRoot(), deleteNodes[i]);
-        tree4.rbDelete(temp);
-    }
-
-    cout << "Inorder traversal after deleting deleteNodes.csv:" << endl;
-    treeWalk(tree4.getRoot());
-    cout << endl << endl;
-
-    cout << "Max depth of BST after deleting deleteNodes.csv:" << findDepth(tree4.getRoot()) << endl << endl;
-
 }
-
-
-
-    
