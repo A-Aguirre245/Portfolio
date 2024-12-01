@@ -1,0 +1,2 @@
+This project focused on the use of BSF to search a dictionary comprised of four-letter words. It would taken in 2 user input strings, word1 and word2, and searched the dictionary to see
+if there was a path from word1 to word2, by changing one letter at a time from word1
