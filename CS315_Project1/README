@@ -1,0 +1,2 @@
+This project implemented three different search algorithms, InsertionSort, QuickSort, and MergeSort on three different datasets of varrying sizes and sortedness.
+This helped look at how and why certain search algorithms perform better on different datasets.
