@@ -1,0 +1,2 @@
+This project used a photoresistor and a LED circuit to measure the amount of reflected light of 3 specific materials (wood.
+It would then use that to move a servo motor that would physically indicate what material was being sensed from three previously selected materials
