@@ -1,0 +1,2 @@
+This project implemented both binary and red-black trees to study their properties and usefullness. Typical tree data structure methods were included such as
+insertion, deletion, etc. In addition, the heights of both trees were compared to analyze how the self-balancing nature of red-black trees improved performance. 
