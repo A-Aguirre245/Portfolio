@@ -14,3 +14,6 @@ CS 270 - Systems Programming
 CS 315 - Algorithm Design/Analysis
 
 CS 463G - Intro to Artificial Intelligence
+
+Personal - Personal Projects
+
